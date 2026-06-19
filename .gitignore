@@ -1,0 +1,15 @@
+# Stan & C++ Compiled Binaries
+*.exe
+*.hpp
+*.o
+*.d
+*.so
+*.dll
+.RData
+.Rhistory
+
+# R User Specific Files
+.Rproj.user/
+
+# Data safety (Optional: if data.csv is too large)
+# data.csv
