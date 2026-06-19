@@ -59,7 +59,7 @@ In the first stage of this learning project (modeled in [`rstan-covid-1.R`](./rs
 <img width="2400" height="1650" alt="posterior_regression" src="https://github.com/user-attachments/assets/be8b8420-0c1a-4304-acdb-e70b5141283b" />
 
 ### Why a shared slope at first?
-It seemed reasonable to assume that the Abbott machine test would track immune changes at the **exact same rate for everyone**, whether they were healthy or sick. 
+* It seemed reasonable to assume that the Abbott machine test would track immune changes at the **exact same rate for everyone**, whether they were healthy or sick. 
 
 ### The apparent mistake
 * **The Healthy Group (Dashed Blue Line):** The blue dots form a perfect flat line at the bottom. But this model forced the dashed blue line to tilt upward into empty space where there are no dots.
@@ -68,7 +68,7 @@ It seemed reasonable to assume that the Abbott machine test would track immune c
 * The **mNT** score does not read below 10. Less than 10 is treated as 10 in the data.
 
 ### The fix
-The Stan code is updated to calculate **two different angles** (`beta[pcr_status]`). This allowed the blue line to stay perfectly flat on the floor, and allowed the red line to climb steeply to accurately match the real data.
+* The Stan code is updated to calculate **two different angles** (`beta[pcr_status]`). This allowed the blue line to stay perfectly flat on the floor, and allowed the red line to climb steeply to accurately match the real data.
 
 ---
 
