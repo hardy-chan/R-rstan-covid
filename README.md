@@ -65,7 +65,7 @@ In the first stage of this learning project (modeled in [`rstan-covid-1.R`](./rs
 * **The Healthy Group (Dashed Blue Line):** The blue dots form a perfect flat line at the bottom. But this model forced the dashed blue line to tilt upward into empty space where there are no dots.
 
 ### The wall (limit of detection) and the rounding-up
-* The **mNT** score does not read below 10. Less than 10 is treated as 10 in the data.
+* The **mNT** score does not read below 10. Values less than 10 are rounded up to 10 in the dataset.
 
 ### The fix
 * The Stan code is updated to calculate **two different angles** (`beta[pcr_status]`). This allowed the blue line to stay perfectly flat on the floor, and allowed the red line to climb steeply to accurately match the real data.
